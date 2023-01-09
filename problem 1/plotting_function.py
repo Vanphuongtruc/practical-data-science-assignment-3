@@ -29,17 +29,17 @@ def kde_plot(df, feature):
     
 def group_tenure(df):
     if df.tenure <= 12:
-        return "less_than_1"
+        return "[0,12]"
     elif (df.tenure > 12) & (df.tenure <= 24):
-        return "less_than_2"
+        return "[12,24]"
     elif (df.tenure > 24) & (df.tenure <= 36):
-        return "less_than_3"
+        return "[24,36]"
     elif (df.tenure > 36) & (df.tenure <= 48):
-        return "less_than_4"
+        return "[36,48]"
     elif (df.tenure > 48) & (df.tenure <= 60):
-        return "less_than_5"
+        return "[48,60]"
     else:
-        return "greater_than_5"
+        return "[>60]"
     
     
 def tenure_groups_plot(df):
