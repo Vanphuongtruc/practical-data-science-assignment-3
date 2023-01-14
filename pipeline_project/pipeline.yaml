@@ -1,0 +1,37 @@
+tasks:
+  - source: scripts/get.py
+    name: get
+    product:
+       nb: products/get.ipynb
+       data: products/raw.csv
+    
+  - source: scripts/clean.py
+    name: clean
+    product:
+       nb: products/clean.ipynb
+       data: products/clean.csv
+
+  - source: scripts/preprocess.py
+    name: preprocess
+    product:
+       nb: products/preprocess.ipynb
+       data: products/preprocess.csv
+       
+  - source: scripts/feature_eng.py
+    name: feature_eng
+    product:
+       nb: products/feature_eng.ipynb
+       data: products/feature_eng.csv
+       
+  - source: scripts/train.py
+    name: train
+    product:
+       nb: products/train.ipynb
+       model: products/model.pickle
+
+  - source: scripts/predict.py
+    name: predict
+    product:
+       nb: products/predict.ipynb
+       data: products/predicts.csv
+  
